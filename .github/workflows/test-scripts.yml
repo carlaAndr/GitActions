@@ -19,13 +19,22 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run code
+
+
+    - name: Set working directory
+      run: cd GitActions
+
+    - name: Run tests
       run: |
         ls
-        pytest --rootdir=GitActions/code/
+        pytest .github/workflow/
+
         result=$?
+    
         if [ $result -ne 0 ]; then
           echo "Tests failed!"
           exit $result
         fi
+
+
 
