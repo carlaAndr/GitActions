@@ -24,10 +24,8 @@ jobs:
     - name: Run tests
       run: |
         ls
-        pytest .github/workflow/
-
+        pytest code
         result=$?
-    
         if [ $result -ne 0 ]; then
           echo "Tests failed!"
           exit $result
