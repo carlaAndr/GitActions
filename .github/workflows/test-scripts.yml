@@ -22,7 +22,7 @@ jobs:
     - name: Run code
       run: |
         ls
-        pytest code/
+        pytest --rootdir=GitActions/code/
         result=$?
         if [ $result -ne 0 ]; then
           echo "Tests failed!"
