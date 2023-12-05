@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Clean up GitHub Actions cache
+    run: |
+      rm -rf $RUNNER_TOOL_CACHE/Python
+
     - name: Checkout Repository
       uses: actions/checkout@v2
 
