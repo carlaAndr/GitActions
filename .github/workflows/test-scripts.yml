@@ -21,7 +21,8 @@ jobs:
         pip install -r requirements.txt
     - name: Run code
       run: |
-        # Assuming your tests are in the 'tests' directory
+        pytest --ignore=code/appBad_test.py code/
+
         ls
         pytest code/
     - name: Check for failed tests
