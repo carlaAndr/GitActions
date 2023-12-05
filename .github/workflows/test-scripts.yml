@@ -20,10 +20,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run code
-    
       run: |
         ls
-        pytest --ignore=code/appBad_test.py code/
+        pytest code/
         result=$?
         if [ $result -ne 0 ]; then
           echo "Tests failed!"
