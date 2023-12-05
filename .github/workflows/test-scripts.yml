@@ -24,7 +24,7 @@ jobs:
     - name: Run tests
       run: |
         ls
-        pytest code
+        pytest /code
         result=$?
         if [ $result -ne 0 ]; then
           echo "Tests failed!"
