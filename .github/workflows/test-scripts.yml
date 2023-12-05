@@ -21,10 +21,6 @@ jobs:
         pip install -r requirements.txt
 
 
-    - name: Set working directory
-      run: cd $GITHUB_WORKSPACE/GitActions && cd GitActions
-
-
     - name: Run tests
       run: |
         ls
