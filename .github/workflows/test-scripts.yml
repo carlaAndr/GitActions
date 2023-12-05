@@ -25,10 +25,8 @@ jobs:
 
     - name: Test Scripts
       run: |
-        python script1.py
-        python script2.py
-        python pandapp.py
-        python timer.py
+        # Ejecutar todos los scripts de Python en el directorio actual
+        find . -name "*.py" -exec python {} \;
 
   check-syntax:
     runs-on: ubuntu-latest
